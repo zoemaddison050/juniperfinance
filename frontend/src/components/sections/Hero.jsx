@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight, Shield, ExternalLink, MessageCircle, Send, Calendar } from 'lucide-react';
 import { Button } from '../ui/button';
-import { profileData } from '../../data/mockData';
+import { useData } from '../../context/DataContext';
 
 const Hero = () => {
+  const { profile } = useData();
+  
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
       {/* Background Pattern */}
