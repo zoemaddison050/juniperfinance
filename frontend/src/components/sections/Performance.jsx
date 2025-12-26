@@ -116,7 +116,7 @@ const Performance = () => {
                 
                 {/* Bars */}
                 <div className="absolute bottom-8 left-0 right-0 flex items-end justify-between gap-2 h-48">
-                  {performanceData.chartData.map((data, index) => (
+                  {performance.chartData.map((data, index) => (
                     <div key={index} className="flex-1 flex flex-col items-center gap-1">
                       <div className="w-full flex gap-1 justify-center">
                         <div
