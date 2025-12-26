@@ -49,7 +49,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl">
-                {profileData.description}
+                {profile.description}
               </p>
             </div>
 
