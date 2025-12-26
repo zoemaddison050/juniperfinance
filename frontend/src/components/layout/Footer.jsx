@@ -104,7 +104,7 @@ const Footer = () => {
                 {profile.email}
               </a>
               <a
-                href={`https://wa.me/${profileData.whatsapp.replace(/[^0-9]/g, '')}`}
+                href={`https://wa.me/${profile.whatsapp?.replace(/[^0-9]/g, '')}`}
                 className="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors"
               >
                 <Phone className="w-4 h-4" />
