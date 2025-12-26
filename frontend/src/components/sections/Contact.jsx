@@ -228,10 +228,15 @@ const Contact = () => {
                 <Button
                   type="submit"
                   className="w-full bg-slate-900 hover:bg-slate-800 text-white h-12 text-base"
+                  disabled={isLoading}
                 >
                   <Calendar className="w-5 h-5 mr-2" />
-                  Request Consultation
+                  {isLoading ? 'Submitting...' : 'Request Consultation'}
                 </Button>
+
+                {error && (
+                  <p className="text-sm text-red-500 text-center">{error}</p>
+                )}
 
                 <p className="text-xs text-slate-500 text-center">
                   By submitting, you agree to our privacy policy. Your information will never be shared.
