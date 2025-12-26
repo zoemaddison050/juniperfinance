@@ -1,8 +1,10 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
-import { profileData, navLinks } from '../../data/mockData';
+import { navLinks } from '../../data/mockData';
+import { useData } from '../../context/DataContext';
 
 const Footer = () => {
+  const { profile } = useData();
   const currentYear = new Date().getFullYear();
 
   return (
