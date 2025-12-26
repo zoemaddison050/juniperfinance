@@ -101,7 +101,7 @@ const Footer = () => {
                 className="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                {profileData.email}
+                {profile.email}
               </a>
               <a
                 href={`https://wa.me/${profileData.whatsapp.replace(/[^0-9]/g, '')}`}
