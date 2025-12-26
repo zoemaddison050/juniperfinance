@@ -143,7 +143,7 @@ const Performance = () => {
             {/* Donut Chart Placeholder */}
             <div className="relative w-48 h-48 mx-auto mb-6">
               <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                {performanceData.allocation.reduce((acc, item, index) => {
+                {performance.allocation.reduce((acc, item, index) => {
                   const offset = acc.offset;
                   const dashArray = item.percentage;
                   acc.elements.push(
