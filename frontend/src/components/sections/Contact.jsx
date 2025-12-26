@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, MessageCircle, Send, Calendar, Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
-import { profileData } from '../../data/mockData';
+import { Mail, MessageCircle, Send, Calendar, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { useData } from '../../context/DataContext';
+import { submitContact } from '../../services/api';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
@@ -8,6 +9,7 @@ import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
 const Contact = () => {
+  const { profile } = useData();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,18 +18,27 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock submission - store in localStorage for demo
-    const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-    submissions.push({ ...formData, timestamp: new Date().toISOString() });
-    localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', investmentGoal: '', message: '' });
-    }, 3000);
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      await submitContact(formData);
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', investmentGoal: '', message: '' });
+      }, 3000);
+    } catch (err) {
+      console.error('Error submitting contact form:', err);
+      setError('Failed to submit. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
