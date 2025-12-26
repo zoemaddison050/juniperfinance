@@ -193,7 +193,7 @@ const Performance = () => {
         {/* Disclaimer */}
         <div className="mt-8 p-4 bg-slate-800/30 rounded-xl border border-slate-700">
           <p className="text-xs text-slate-500 text-center">
-            {performanceData.disclaimer}
+            {performance.disclaimer}
           </p>
         </div>
       </div>
