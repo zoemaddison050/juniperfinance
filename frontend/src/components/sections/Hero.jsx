@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="space-y-8">
             {/* Trust Badge */}
             <a
-              href={profileData.finraLink}
+              href={profile.finraLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 text-sm font-medium hover:bg-emerald-100 transition-colors"
