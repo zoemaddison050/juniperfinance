@@ -97,7 +97,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href={`mailto:${profileData.email}`}
+                href={`mailto:${profile.email}`}
                 className="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors"
               >
                 <Mail className="w-4 h-4" />
