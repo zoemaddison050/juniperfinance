@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Email</p>
-                  <p className="text-sm text-slate-500">{profileData.email}</p>
+                  <p className="text-sm text-slate-500">{profile.email}</p>
                 </div>
               </a>
 
