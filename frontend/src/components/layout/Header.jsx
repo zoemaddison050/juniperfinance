@@ -62,7 +62,39 @@ const Header = () => {
           </nav>
 
           {/* CTA & Verification */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Social Media Links */}
+            <div className="flex items-center gap-1">
+              <a
+                href="#"
+                className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+            </div>
+            <div className="w-px h-6 bg-slate-200" />
             <a
               href={profileData.finraLink}
               target="_blank"
