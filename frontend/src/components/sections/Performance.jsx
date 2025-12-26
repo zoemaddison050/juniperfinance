@@ -174,7 +174,7 @@ const Performance = () => {
 
             {/* Legend */}
             <div className="space-y-3">
-              {performanceData.allocation.map((item, index) => (
+              {performance.allocation.map((item, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div
