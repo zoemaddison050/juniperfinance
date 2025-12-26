@@ -19,7 +19,7 @@ const Footer = () => {
                 <span className="text-slate-900 font-bold text-lg">JB</span>
               </div>
               <div>
-                <p className="font-semibold text-lg">{profileData.name}</p>
+                <p className="font-semibold text-lg">{profile.name}</p>
                 <p className="text-xs text-slate-400">Investment Specialist</p>
               </div>
             </div>
