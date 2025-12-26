@@ -1,9 +1,12 @@
 import React from 'react';
 import { Award, Shield, CheckCircle, ExternalLink } from 'lucide-react';
-import { profileData, credentials } from '../../data/mockData';
+import { useData } from '../../context/DataContext';
 import { Button } from '../ui/button';
 
 const About = () => {
+  const { profile } = useData();
+  const credentials = profile.credentials || [];
+  
   return (
     <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
