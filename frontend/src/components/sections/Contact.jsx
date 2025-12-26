@@ -66,7 +66,7 @@ const Contact = () => {
             {/* Contact Methods */}
             <div className="space-y-4">
               <a
-                href={`mailto:${profileData.email}`}
+                href={`mailto:${profile.email}`}
                 className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all group"
               >
                 <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-900 transition-colors">
