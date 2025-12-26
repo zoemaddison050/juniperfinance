@@ -73,7 +73,7 @@ const Performance = () => {
                 <TrendingDown className="w-5 h-5 text-amber-400" />
               </div>
             </TooltipProvider>
-            <p className="text-3xl font-bold text-amber-400">{performanceData.summary.maxDrawdown}</p>
+            <p className="text-3xl font-bold text-amber-400">{performance.summary.maxDrawdown}</p>
           </div>
         </div>
 
