@@ -1,9 +1,11 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, Info } from 'lucide-react';
-import { performanceData } from '../../data/mockData';
+import { useData } from '../../context/DataContext';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 const Performance = () => {
+  const { performance } = useData();
+  
   return (
     <section id="performance" className="py-20 lg:py-28 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
