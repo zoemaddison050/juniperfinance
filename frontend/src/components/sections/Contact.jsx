@@ -94,7 +94,7 @@ const Contact = () => {
               </a>
 
               <a
-                href={`https://t.me/${profileData.telegram.replace('@', '')}`}
+                href={`https://t.me/${profile.telegram.replace('@', '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all group"
