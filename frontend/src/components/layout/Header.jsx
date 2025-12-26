@@ -5,6 +5,7 @@ import { navLinks } from '../../data/mockData';
 import { useData } from '../../context/DataContext';
 
 const Header = () => {
+  const { profile } = useData();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
