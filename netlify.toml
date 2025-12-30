@@ -15,10 +15,10 @@
   to = "/index.html"
   status = 200
 
-# API proxy to backend (if you want to keep using the current backend)
+# API proxy to backend
 [[redirects]]
   from = "/api/*"
-  to = "https://juniperfinance.preview.emergentagent.com/api/:splat"
+  to = "https://api.juniperfinance.com/api/:splat"
   status = 200
   force = true
 
@@ -39,13 +39,13 @@
 
 # Environment variables for build
 [context.production.environment]
-  REACT_APP_BACKEND_URL = "https://juniperfinance.preview.emergentagent.com"
+  REACT_APP_BACKEND_URL = "https://api.juniperfinance.com"
   NODE_ENV = "production"
 
 [context.deploy-preview.environment]
-  REACT_APP_BACKEND_URL = "https://juniperfinance.preview.emergentagent.com"
+  REACT_APP_BACKEND_URL = "https://api.juniperfinance.com"
   NODE_ENV = "production"
 
 [context.branch-deploy.environment]
-  REACT_APP_BACKEND_URL = "https://juniperfinance.preview.emergentagent.com"
+  REACT_APP_BACKEND_URL = "https://api.juniperfinance.com"
   NODE_ENV = "production"
